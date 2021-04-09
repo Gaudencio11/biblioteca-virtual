@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+
+{%block title%}{{livro.book_title}}{%endblock%}
+
+{%block body%}
+    <h1 class="title">{{livro.book_title}}</h1>
+    <div class="subtitle">
+        {% if livro.book_image  %}
+            <img src="{{livro.book_image.url}}" alt="top" style="width: 250px; height: 350px; object-fit: cover" >
+        {%else%}
+            <li>(Não possui foto)</li>
+        {% endif %}
+        <h3>Autor: {{livro.book_author}}</h3>
+        <h4>Editora: {{livro.book_publisher}}</h4>
+        <h4>Estilo: {{livro.book_type}}</h4>
+        <h4>Sinopse:</h4>
+        <p>{{livro.book_sinopse}}</p>
+        <h4>Minha avaliação:</h4>
+        <p>{{livro.user_experience}}</p>
+        <h4>Minha Nota: {{livro.user_rating}}</h4>
+    </div>
+    <a href="{% url 'read' %}" class="button">Voltar Para Lista Principal</a>
+
+{%endblock%}

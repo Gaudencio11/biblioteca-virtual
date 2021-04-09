@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+
+{%block title%}Adicionar Livro à Lista de Desejos{%endblock%}
+
+{%block body%}
+    <h2 class="title">Cadastro de Livro</h2>
+    <div class="subtitle">
+        <form method="post" >
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" class="button">salvar</button>
+        </form>
+        <a href="{% url 'wish' %}" class="button2"> mudei de ideia</a>
+    </div>
+{%endblock%}

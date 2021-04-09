@@ -1,0 +1,15 @@
+  
+{% extends 'base.html' %}
+
+{% block title %}Entrar{% endblock %}
+
+{% block body %}
+    <h2>Entrar</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <h1>editar aqui depois usando o  crispy forms</h1>
+        <h1> {{auth}}</h1>
+        <button type="submit">Entrar</button>
+    </form>
+{% endblock %}

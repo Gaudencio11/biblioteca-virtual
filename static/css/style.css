@@ -1,0 +1,77 @@
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: "Adobe Devanagari";
+
+}
+
+.button2{
+    background-color: #ff5e5b;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: "Adobe Devanagari";
+
+}
+
+
+.subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    width: 600px;
+    font-size: 20px;
+    font-family: "Adobe Devanagari";
+
+}
+
+.title{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: "Adobe Devanagari";
+    font-size: 40px;
+    color: white;
+    background-color: #336699;
+    height: 90px;
+}
+
+.titulolivro{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-family: "Adobe Devanagari";
+    font-size: 25px;
+    background-color: #ff5e5b;
+    height: 30px;
+
+}
+
+.aviso{
+    color: darkred;
+}
+
+.picture{
+    width: 100px;
+    height: 200px;
+    object-fit: cover;    
+}
+

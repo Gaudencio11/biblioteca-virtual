@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+
+{%block title%}Seus Livros{%endblock%}
+
+{%block body%}
+<h3>Olá {{user}}</h3>
+    <img src="/static/media/01.jpg" alt="" style="width: 100%;
+        height: 200px; object-fit: cover">
+    <h2 class="title">Esses são seus livros!</h2>
+    <div style="text-align: center">
+        <a href="{% url 'profile' %}" class="button">Voltar menu Princpal</a>
+        <a href="{% url 'export_excel' %}" >Baixar excell dos livros</a>
+    </div>
+    <form method="get">
+       {{myFilter.form}}
+        <button class="button" type="submit">Filtrar</button>
+    </form>
+    {% for item in livros %}
+    
+        <h3 class="titulolivro">{{item.book_title}}</h3>
+        <div style="text-align: center; background-color: #ff5e5b" >
+            <a href="{% url 'detail' item.id %}" class="button">Mais Informações Sobre o Título</a>
+            <a href="{% url 'update' item.id %}" class="button">Quer Mudar Algo?</a>
+            <!-- o primeiro eh a requeste o segundo o id -->
+            <a href="{% url 'delete' item.id %}" class="button">Deletar o Livro</a>
+        </div>
+    {%endfor%}
+{%endblock%}

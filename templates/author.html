@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <title>Autor da Página</title>
+</head>
+<body>
+    <h1 class="title">Marcos Otávio Novais</h1>
+    <div class="subtitle">
+        <h3>Estudante de CC. P1. Rgm: 25873946</h3>
+        <h2>Contato: Marcos.otavio10@gmail.com</h2>
+        <p>Esse site tem como objetivo cumprir o desafio proposto pela Fábrica
+            de Software (Unipê) e possibilitar aos amantes da leitura a
+            oportundidade de gravar digitalmente sua coleção de livros, assim como
+            resenhas próprias e lembraças que cada obra traz.
+            Espero que de alguma forma esse site venha ser útil no futuro, bem
+            como a minha presença na Fábrica.</p>
+        <p>Aqui deixo registrado como um bônus para o analista desse site livros
+        que recomento fortemente, um para cada tipo de gosto.</p>
+        <ul>
+            <li>A sombra do Vento</li>
+            <li>O Instituto</li>
+            <li>A Ilha do Medo</li>
+        </ul>
+    <a href="{% url 'profile' %}" class="button">voltar ao Menu</a>
+    </div>
+</body>
+</html>

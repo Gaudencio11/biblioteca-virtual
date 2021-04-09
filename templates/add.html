@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+{%block title%} adicionar Livro{%endblock%}
+
+{%block body%}
+    {{teste}}
+    <h2 class="title">Cadastro de Livro</h2>
+    <div class="subtitle">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.media}}
+            {{form.as_p}}
+            <button type="submit" class="button">salvar</button>
+        </form>
+        <a href="{% url 'profile' %}" class="button2"> mudei de ideia</a>
+    </div>
+{%endblock%}

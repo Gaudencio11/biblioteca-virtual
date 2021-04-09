@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+{%block title%} Página de Edição de Registro {% endblock %}
+
+{%block body%}
+    <h2 class="title">Mudou de ideia?</h2>
+    <div class="subtitle">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.media}}
+            {{form.as_p}}
+            <button type="submit" class="button">Salvar</button>
+        </form>
+    <a href="{% url 'read' %}" class="button2"> Mudei de Ideia</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+
+{%block title%}Lista de desejos{%endblock%}
+
+{%block body%}
+<img src="desafio_fabrica/static/media/01.jpg" alt="" style="width: 100%;
+height: 200px; object-fit: cover">
+<div style="text-align: center">
+    <h1 class="title">Sua Lista de Desejos</h1>
+    <a href="{% url 'profile' %}"class="button">página principal</a> 
+    <a href="{% url 'add_wish' %}"class="button">Adicionar Livro à lista de desejos</a> 
+    {% for livro in desejos %}
+        <h3 >{{livro.book_name}}</h3>
+        <a href="https://www.google.com.br/search?q={{livro.book_name}}"
+        target = "_blank" class="button">Pesquisar no Google</a>
+        <a href="https://www.amazon.com.br/s?k={{livro.book_name}}" target =
+             "_blank" class="button2">Pesquisar na Amazon</a>
+    {% endfor%}
+</div>
+
+{%endblock%}

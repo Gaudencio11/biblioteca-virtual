@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+
+{%block title%} Página de Exclusão de Registro {%endblock%}
+
+{%block body%}
+
+<div class="subtitle">
+    <h2 class="aviso">Tome Aqui Uma Decisão Difícil (ou não)</h2>
+    <h3>Deseja realmente excluir {{book.book_title}}? </h3>
+        <form method="post">
+            {% csrf_token %}
+            {{formulario.as_p}}
+            <button type="submit" class="button">Excluir</button>
+        </form>
+    <a href="{% url 'read' %}" class="button2">Jamais!</a>
+
+</div>
+{%endblock%}

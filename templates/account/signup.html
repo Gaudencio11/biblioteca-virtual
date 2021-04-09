@@ -1,0 +1,17 @@
+  
+{% extends 'base.html' %}
+
+
+
+{% block title %}Cadastro{% endblock %}
+
+{% block body %}
+    <h2>Cadastro</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        
+        <button  type="submit">Cadastrar</button>
+    <a href="{% url 'main' %}" >Voltar</a>
+    </form>
+{% endblock %}
